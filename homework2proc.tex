@@ -1,7 +1,7 @@
 \documentclass[11pt,largemargins]{homework}
 
-\newcommand{\hwname}{Alfredo Baione}
-\newcommand{\hwemail}{s279328@studenti.polito.it}
+\newcommand{\hwname}{Giulio Nenna}
+\newcommand{\hwemail}{s245715@studenti.polito.it}
 \newcommand{\hwtype}{Homework}
 \newcommand{\hwnum}{2}
 \newcommand{\hwclass}{}
@@ -79,28 +79,33 @@ Realizzato in collaborazione con Giulio Nenna (s245717), Andrea Sanna (s222975) 
     \questionpart
  Il processo di costruzione e distruzione del castello di sabbia può essere modellato con una catena di Markov a tempo continuo siffatta:                                                                        
 \ctikzfig{Grafo_ES2}
-$S=\{0,1,2\}$ è l'insieme degli stati associati ai seguenti rates di permanenza in ognuno di essi:
-  \begin{align*}
-  &\lambda\left(0\right)=2,\\
-  &\lambda\left(1\right)=\left(\frac{1}{1+\frac{1}{3}}\right)=\frac{3}{4},\\
-  &\lambda\left(2\right)=3.
-  \end{align*}
- La matrice di transizione della catena a tempo discreto, ovvero la catena ``embedded'', associata a tale processo, è:
- \begin{equation*}
-  R=\begin{bmatrix}
-        0 & 1 & 0\\
-        1-e^{-3} & 0 & e^{-3} \\
-         1 & 0 & 0
-      \end{bmatrix}.
-\end{equation*}  
-Da essa è possibile ricavare la seguente matrice dei tassi di transizione $q\left(i,j\right)$($=\lambda\left(i\right)r\left(i,j\right),\forall i,j, i\neq j$):
+$S=\{0,1,2\}$ è l'insieme degli stati ai quali sono associati i seguenti transition rates:
+
 \begin{equation*}
   Q=\begin{bmatrix}
         -2 & 2 & 0\\
-        \frac{3-3e^{-3}}{4} & -\frac{3}{4} &  \frac{3+3e^{-3}}{4}\\
+         3 & -4 & 1 \\
          3 & 0 & -3
       \end{bmatrix}.
-\end{equation*}  
+\end{equation*} 
+
+Dove \(q(i,j)\) per \(i \neq j\) rappresenta il \textit{rate} dell'esponenziale che partecipa alla gara esponenziale se la catena si trova sullo stato \(i\). Se a vincere è l'esponenziale \(\tau_{ij} \sim \text{exp}(q(i,j))\) allora la catena salta allo stato \(j\). In pratica dallo stato 0 (costruzione del primo piano) si passa necessariamente allo stato 1 dopo un tempo esponenziale (exp(2)). Una volta entrati nello stato 1 (costruzione del secondo piano) parte una gara esponenziale tra l'onda (exp(3)) e la fine della costruzione del secondo piano (exp(2)): se vince la prima si ritorna allo stato 0 mentre se vince la seconda si passa allo stato 2. Infine, arrivati allo stato 2 l'unica possibilità è quella di aspettare un'onda per tornare allo stato 0, che arriverà secondo un tempo esponenziale (exp(3)).
+\\
+
+Da \(Q\) si deducono quindi:
+\begin{align*}
+  \begin{cases}
+    \lambda(0) = 2 \\
+    \lambda(1) = 4 \\
+    \lambda(2) = 3
+  \end{cases} && R =
+  \begin{bmatrix}
+    0 & 1 & 0 \\
+    \frac{3}{4} & 0 & \frac{1}{4} \\
+    0 & 0 & 1 
+  \end{bmatrix}
+\end{align*}
+
 \questionpart
 La probabilità che, partendo dallo stato $1$, dopo $2$ ore, ci si ritrovi nello stato $0$ è
 \begin{equation*}
@@ -113,15 +118,15 @@ P_{2}=e^{Q_{2}}= \sum_{k=0}^{\infty}2^{k}\frac{Q^{k}}{k!},
 che è una soluzione particolare delle equazioni di Kolmogorov ($P'\left(t\right)=P_{t}Q$ e $P'\left(t\right)=QP_{t}$), nel caso $t=2$.
 
 \questionpart
-La probabilità che i bambini riescano a finire la costruzione del secondo livello, prima che un'onda li costringa a ricominciare ed essendo già alle prese con la costruzione del primo livello, è legata al fatto che la variabile di Poisson relativa al processo di comparsa delle onde arrivi due volte seconda in due gare esponenziali, rispettivamente prima con l'esponenziale di tasso $2$ e, poi, con l'esponenziale di tasso all'ora.\\
+La probabilità che i bambini riescano a finire la costruzione del secondo livello, prima che un'onda li costringa a ricominciare ed essendo già alle prese con la costruzione del primo livello, è legata al fatto che la variabile di Poisson relativa al processo di comparsa delle onde arrivi due volte seconda in due gare esponenziali, rispettivamente prima con l'esponenziale di tasso $2$ e, poi, con l'esponenziale di tasso 1 all'ora.\\
 Allora, si avrà:
 \begin{align*}
-&1^{a} \text{gara}: \,\,\, P\left(\text{exp}\left(2\right) \text{arrivi primo}\right)=\frac{\lambda\left(\text{exp}\left(2\right)\right)}{\sum_{i}\lambda_{i}}=\frac{2}{2+\frac{1}{3}}=\frac{6}{7};\\
-&2^{a} \text{gara}: \,\,\, P\left(\text{exp}\left(1\right) \text{arrivi primo}\right)=\frac{\lambda\left(\text{exp}\left(1\right)\right)}{\sum_{i}\lambda_{i}}=\frac{1}{1+\frac{1}{3}}=\frac{3}{4}.
+&1^{a} \text{gara}: \,\,\, P\left(\text{exp}\left(2\right) \text{arrivi primo}\right)=\frac{\lambda\left(\text{exp}\left(2\right)\right)}{\sum_{i}\lambda_{i}}=\frac{2}{2+3}=\frac{2}{5};\\
+&2^{a} \text{gara}: \,\,\, P\left(\text{exp}\left(1\right) \text{arrivi primo}\right)=\frac{\lambda\left(\text{exp}\left(1\right)\right)}{\sum_{i}\lambda_{i}}=\frac{1}{1+3}=\frac{1}{4}.
 \end{align*}  
 Dunque, la probabilità cercata sarà pari a:
 \begin{equation*}
-\frac{6}{7}\cdot \frac{3}{4}=\frac{9}{14}\thicksim 0.643.
+\frac{2}{5}\cdot \frac{1}{4}=\frac{1}{10}
 \end{equation*}
  \end{alphaparts}
     
@@ -137,10 +142,9 @@ q\left(i,j\right)=\begin{cases}\frac{3+\sin{i}}{1+i^{2}},\,\,\,\text{se}\,\,\,i^
 \questionpart
 Trovare $P\left(X_{1.5}=4 \mid X_{0}=8\right)$ significa calcolare $P_{1.5}\left(8,4\right)$. Tuttavia, $\forall i,j, i\neq j$, dallo stato $i$ si può arrivare allo stato $j$ solamente se 
 \begin{equation*}
-i<j<2i^{2}+1
+i^2<j<2i^{2}+1
 \end{equation*}
-e ciò non è vero per la coppia $\left(8,4\right)$.\\
-Pertanto, si avrà che
+ossia la catena non può fare altro che avanzare nello spazio degli stati Pertanto non è possibile che se \(X_0 = 8\) la catena effettui un passo verso uno stato \(j<8\), in particolare:
 \begin{equation*}
 P_{1.5}\left(8,4\right)=0.
 \end{equation*}
@@ -165,14 +169,11 @@ P\left(\tau_{0}<1.5\right)=1-e^{-4.5}\thicksim 0.99.
 \end{equation*}
 \questionpart
 Per capire se la catena è esplosiva, possiamo studiare i rates $\lambda\left(i\right)$ associati ad ogni stato $y_{i}$ della catena ``embedded''. Risulta:
-\begin{align*}
-&\lambda\left(0\right)= 3+ \sin{0},\\
-&\lambda\left(1\right)= 3 + \sin{1},\\
-&...\\
-&\lambda\left(n\right)=3+\sin{n}\\
-&\Rightarrow \sum_{n=0}^{\infty}\frac{1}{\lambda_{y_{n}}}=\sum_{n=0}^{\infty}\frac{1}{3+\sin{n}}>\sum_{n=0}^{\infty}\frac{1}{4}=+\infty.
-\end{align*}
-Allora, la catena non è esplosiva.
+\begin{gather*}
+\lambda(i) =  \sum \limits_{j=1}^{\infty} q(i,j) =  \sum \limits_{j = i^2 +1}^{2i^2 + 1} \frac{3+\sin(i)}{1+i^2} = \\
+(2i^2 + 1 - i^2 - 1+1) \frac{3+\sin(i)}{1+i^2} = (3+sin(i))\left(\frac{i^2+1}{i^2+1}\right)<4
+\end{gather*}
+Poichè i rate dei tempi di uscita da ciascuno stato sono maggiorati da una costante \(K=4\) allora la catena \textbf{non }è esplosiva.
   \end{alphaparts}
   
   
@@ -198,35 +199,27 @@ Allora, la catena non è esplosiva.
   \begin{equation*}
   q\left(i,j\right)=\begin{cases}i+1 \,\,\,\text{if}\,\,\,i<j\leq i+5\\0.5 \,\,\,\text{if}\,\,\,j=i-1\,\,\,\text{e}\,\,\,i\geq 1\\0 \,\,\, \text{in tutti gli altri casi}\end{cases},
   \end{equation*}
-  risulta che
-  \begin{align*}
-&\lambda\left(0\right)= 5,\\
-&\lambda\left(1\right)= \frac{21}{2},\\
-&\lambda\left(2\right)= \frac{31}{2},\\
-&\lambda\left(3\right)=\frac{31}{2},\\
-&...,\\
-\end{align*}
-da cui si impone lo studio del carattere della serie seguente:
-\begin{equation*}
-\sum_{n=0}^{\infty}\frac{1}{\lambda_{y_{n}}}=\frac{1}{5}+2
-\sum_{n=2}^{\infty}\frac{1}{10n+1}.
-\end{equation*}
-Applicando il ``criterio del confronto asintotico'' tra
-\begin{align*}
-\sum_{n=1}^{\infty}\frac{1}{10n+1}\,\,\, \text{e} \,\,\, \sum_{n=1}^{\infty}\frac{1}{n},
-\end{align*}
-si scopre che
-\begin{equation*}
-\lim\limits_{n\rightarrow}\frac{n}{10n+1}=\frac{1}{10}
-\end{equation*}
-  e, quindi, $\sum_{n=1}^{\infty}\frac{1}{10n+1}$ diverge, così come $\sum_{n=2}^{\infty}\frac{1}{10n+1}$ (essendo questa nient'altro che la serie confrontata in precedenza con quella armonica, a cui è stato sottratto un termine).\\
-  Allora, siccome
-  \begin{equation*}
-  \frac{1}{5}+2
-\sum_{n=2}^{\infty}\frac{1}{10n+1}>\sum_{n=1}^{\infty}\frac{2}{10n+1}=+\infty,
-\end{equation*} 
-  possiamo concludere che la catena non è esplosiva.
-  
+ allora ad ogni salto catena può effettuare un solo passo indietro oppure un numero di passi in avanti compreso tra 1 e 5. Vale la seguente:
+ \begin{gather*}
+   \lambda(0) = 5\\
+   \lambda(i) =  \sum \limits_{j \in S}^{} q(i,j) = 0.5 +  \sum \limits_{i+1}^{i+5}(i+1) = 5i+5.5 \text{ per } i\geq 1
+ \end{gather*}
+Ora assumendo che la catena embedded parta da un valore arbitrario \(Y_0=k\) con \(k \in \mathbb{N}\), allora
+\begin{gather*}
+  Y_n \leq k + 5n
+\end{gather*}
+ossia \(Y_n\) non può assumere un valore più grande di \(k+5n\) che si realizzerebbe solamente nel caso in cui la catena compie \(n\) salti di lunghezza \(5\) in avanti.
+\\
+Poiché \(\lambda\) è una funzione monotona vale quindi:
+\begin{gather*}
+  \lambda(Y_n) \leq \lambda(k+5n)
+\end{gather*}
+da cui:
+\begin{gather*}
+   \sum \limits_{n=1}^{\infty} \frac{1}{\lambda(Y_n)} \geq  \sum \limits_{n=1}^{\infty} \frac{1}{\lambda(k+5n)}=
+    \sum \limits_{n=1}^{\infty} \frac{1}{5k + 25n + 5.5} = \infty
+\end{gather*}
+pertanto la catena \textbf{non} esplode.
   \questionpart
   Se i tassi di transizione sono
   \begin{equation*}
