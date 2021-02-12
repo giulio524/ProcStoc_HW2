@@ -225,25 +225,41 @@ pertanto la catena \textbf{non} esplode.
   \begin{equation*}
   q\left(i,j\right)=\begin{cases}2^{i} \,\,\,\text{if}\,\,\,j=i+1\\2^{i+1} \,\,\,\text{if}\,\,\,j=i-1\,\,\,\text{e}\,\,\,i\geq 2\\0 \,\,\, \text{in tutti gli altri casi}\end{cases},
   \end{equation*}
-  risulta che
+  Allora, per \(i \geq 2\):
+  \begin{gather*}
+    \lambda(i) = 2^{i+1} + 2^i = 3 \cdot 2^i.
+  \end{gather*}
+  In particolare per \(i\geq 2\):
+  \begin{gather*}
+    r(i,i+1) = \frac{q(i, i+1)}{\lambda(i)} = \frac{1}{3}\\
+    r(i,i-1) = \frac{q(i, i-1)}{\lambda(i)} = \frac{2}{3}
+  \end{gather*}
+  La catena embedded è quindi una \textit{birth-death chain} discreta riflessa nello stato 0. Questo tipo di catena discreta ammette una distribuzione stazionaria (e quindi è ricorrente) se e solo se:
+  \begin{gather*}
+    M =  \sum \limits_{x=0}^{\infty} \prod\limits_{i=0}^{x-1} \frac{p_i}{q_{i-1}} < \infty
+  \end{gather*} 
+  dove nel nostro caso:
   \begin{align*}
-&\lambda\left(0\right)= 1,\\
-&\lambda\left(1\right)= 1,\\
-&\lambda\left(2\right)= 3\cdot 2^{2},\\
-&\lambda\left(3\right)=3\cdot 2^{3},\\
-&\lambda\left(4\right)=3\cdot 2^{4},\\
-&...,\\
-\end{align*}
-da cui si impone lo studio del carattere della serie seguente:
-\begin{equation*}
-\sum_{n=0}^{\infty}\frac{1}{\lambda_{y_{n}}}=2+\frac{1}{6}\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}.
-\end{equation*}
-Essendo, tuttavia, verificata la catena di disuguaglianze
-\begin{equation*}
-\frac{1}{6}\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}<\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}<\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=2,
-\end{equation*}
-la serie di nostro interesse non può che comportarsi come $\frac{1}{6}\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}$  e, dunque, convergere. \\
-Pertanto, la catena risulta esplosiva.
+    p_i = \frac{1}{3} && q_i = \frac{2}{3} && \forall i \geq 2 \\
+    p_0 = p_1 = 1 && q_0 = q_1 = 0\\
+  \end{align*}
+  infatti se la catena si trova negli stati 0 o 1 non può fare altro che avanzare di un passo.
+  \\
+  Quindi la quantità M in esame sarà pari a:
+  \begin{gather*}
+    M = 2 +  \sum \limits_{x=3}^{\infty} \left(\frac{1}{2}\right)^x < \infty.
+  \end{gather*}
+  Questo risultato dimostra che la catena embedded \((Y_n)_{n \in \mathbb{N}}\) relativa alla CTMC ammette una distribuzione stazionaria ed è quindi una catena \textbf{ricorrente}. In particolare la CTMC in esame \textbf{non} può essere esplosiva dal momento che se una generica CTMC è esplosiva, allora la sua catena embedded deve necessariamente essere transiente.
+
+
+
+
+
+
+
+
+
+
   \end{alphaparts}
   
   
