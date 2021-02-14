@@ -285,9 +285,24 @@ pertanto la catena \textbf{non} esplode.
   &X_{2}\left(\omega\right)\in\{-1,2\},\\
   &...\,\,\,\text{e così via}.
   \end{align*}
+  Pertanto le controimmagini sono nella forma:
+  \begin{gather*}
+    X_1^{-1}(1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega > 1\}\\
+    X_1^{-1}(-1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega \leq 1\}\\
+    X_2^{-1}(2) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega > 2\}\\
+    X_2^{-1}(-1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega \leq 2\}\\
+    \vdots
+  \end{gather*}
+  Le \(\sigma\)-algebre che rendono misurabile il processo allo scorrere di \(t\) sono quindi (si considera \(k \in \mathbb{N}\backslash\{0\}\)):
+  \begin{gather*}
+    \sigma (X_1) = \sigma (\{0, 1\}, \{k > 1\})\\
+    \sigma (X_2) = \sigma (\{0, 1\}, \{k > 1\}, \{0, 1, 2\}, \{k > 2\})\\
+    \vdots
+  \end{gather*}
+
   Se ne deduce, allora, che, per $n\geq 0$,
   \begin{equation*}
-  \mathcal{F}_{n}=\sigma\{X_{0},...,X_{n}\}=\sigma\{\{0\},\{i,-1\} \mid i:1,...,n\}.
+  \mathcal{F}_{n}=\sigma\{X_{0},...,X_{n}\}=\sigma(\{0, \dots , i\}, \{k > i\}, i = 1, \dots n)
   \end{equation*}
   \item[(2)]
   Sia
