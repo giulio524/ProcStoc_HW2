@@ -1,7 +1,11 @@
-\documentclass[11pt,largemargins]{homework}
+\addtolength{\oddsidemargin}{-.900in}\addtolength{\evensidemargin}{-.900in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{2in}
+\documentclass[12pt]{homework}
 
-\newcommand{\hwname}{Giulio Nenna}
-\newcommand{\hwemail}{s245715@studenti.polito.it}
+\newcommand{\hwname}{Ornella Elena Grassi}
+\newcommand{\hwemail}{s290310@studenti.polito.it}
 \newcommand{\hwtype}{Homework}
 \newcommand{\hwnum}{2}
 \newcommand{\hwclass}{}
@@ -24,13 +28,11 @@
 \usepackage{subcaption}
 \usepackage[italian]{babel}
 \usepackage{ stmaryrd }
-\usepackage{tikzit}
-\input{Stilegrafo.tikzstyles}
 
 \begin{document}
 \maketitle
 \begin{center}
-Realizzato in collaborazione con Giulio Nenna (s245717), Andrea Sanna (s222975) e Ornella Elena Grassi (s290310)
+Realizzato in collaborazione con Giulio Nenna (s245717), Andrea Sanna (s222975) e Alfredo Baione (s279328)
 \end{center}
 \section{}% --------------ESERCIZIO 1------------------------------
   
@@ -40,29 +42,31 @@ Realizzato in collaborazione con Giulio Nenna (s245717), Andrea Sanna (s222975) 
  
   
     \item[(1)]
-    Dato che sono apparsi $8$ fiori tra le $9$ e le $10$ a.m.,
+    Dato che sono apparsi $8$ fiori tra le $9$ e le $10$ a. m.,
     \begin{itemize}
     \item
-    la probabilità che $3$ di questi siano apparsi tra le $9$ e le 9:20 a.m. è
+    la probabilità che $3$ di questi siano apparsi tra le $9$ e le $9:20$ a. m. è
     \begin{equation*}
     P\left(N\left(\frac{1}{3}\right)=3\mid N\left(1\right)=8\right)=\binom{8}{3}\left(\frac{1}{3}\right)^{3}\left(1-\frac{1}{3}\right)^{5}\thicksim 0.273;
     \end{equation*}
     \item
-    la probabilità che ne appaiano $13$ tra le $9$ a.m. e le 11 a.m. è
-     \begin{gather*}
-     P\left(N\left(2\right)=13\mid N\left(1\right)=8\right)=P\left(N\left(2\right) - N(1)=5\right)=e^{-3}\frac{3^{5}}{5!}\thicksim 0.101.
-     \end{gather*}
+    la probabilità che ne appaiano $13$ tra le $9$ a. m. e le 11 a. m. é
+     \begin{align*}
+     &P\left(N\left(2\right)=13\mid N\left(1\right)=8\right)=\text{(per l'assenza di memoria)}\\
+     &P\left(N\left(1\right)=5\right)=e^{-3}\frac{3^{5}}{5!}\thicksim 0.101.
+     \end{align*}
     \end{itemize} 
     \item[(2)]
-    Si vuole calcolare la probabilità che tra le $9$ a.m. e le $11$ a.m. compaiano esattamente $3$ fiori di tipo A, $2$ di tipo B e nessuno di tipo C. Siano $N_{i}\left(t\right)$ con $i \in \{A, B, C\}$ i processi di Poisson ottenuti dal \textit{thinning} del processo principale \(N(t)\). Essi rappresentano quindi il numero di fiori di tipo \(i\) sbocciati entro l'istante \(t\) e sono indipendenti con rate \(\lambda p_i\). Si ottiene:
-    \begin{gather*}
-    P\left(N_{A}\left(2\right)=3, N_{B}\left(2\right)=2,N_{C}\left(2\right)=0\right)=\\
-    P(N_A(2)=3)P(N_B(2)=2)P(N_C(2)=0)=\\
-    e^{-3\frac{1}{3}2}\frac{\left(3\frac{1}{3}2\right)^{3}}{3!}\cdot e^{-3\frac{1}{6}2}\frac{\left(3\frac{1}{6}2\right)^{2}}{2!}\cdot e^{-3\frac{1}{2}2}\frac{\left(3\frac{1}{2}2\right)^{0}}{0!}= \\
-    e^{-2}\frac{8}{3!}\cdot e^{-1}\frac{1}{2!}\cdot e^{-3}\thicksim 0.0016  
-  \end{gather*} 
+    Si vuole calcolare la probabilità che tra le $9$ a. m. e le $11$ a. m. compaiano esattamente $3$ fiori di tipo A, $2$ di tipo B e nessuno di tipo C.\\
+    Indicando con $N_{i}\left(t\right)$ il numero dei fiori sbocciati di tipo $i$, si ottiene:
+    \begin{align*}
+    &P\left(N_{A}\left(2\right)=3, N_{B}\left(2\right)=2,N_{C}\left(2\right)=0\right)=\\
+    &e^{-3\frac{1}{3}2}\frac{\left(3\frac{1}{3}2\right)^{3}}{3!}\cdot e^{-3\frac{1}{6}2}\frac{\left(3\frac{1}{6}2\right)^{2}}{2!}\cdot e^{-3\frac{1}{2}2}\frac{\left(3\frac{1}{2}2\right)^{0}}{0!}= \\
+    &e^{-2}\frac{8}{3!}\cdot e^{-1}\frac{1}{2!}\cdot e^{-3}\thicksim 0.0016  
+  \end{align*} 
+  (come conseguenza del fatto che $N_{i}\left(t\right), i=A, B, C,$ sono processi di Poisson indipendenti, di rate $\lambda_{p_{i}}$).
      \item[(3)]
-     Indicando con $\tau_{1}$ il tempo in cui compare il primo fiore di tipo A, risulta che se $N_{A}\left(t\right)\backsim \text{Poisson}\left(\lambda{p_{A}}=1\right)$, allora $\tau_{1}\backsim \text{exp}\left(1\right)$.\\
+     Indicando con $\tau_{1}$ il tempo in cui compare il primo fiore di tipo A, risulta che se $N_{A}\left(t\right)\backsim \text{Poisson}\left(\lambda_{p_{A}}=1\right)$, allora $\tau_{1}\backsim \text{exp}\left(1\right)$.\\
      Pertanto, condizionatamente al fatto che il primo fiore che compare è di tipo A, la probabilità che il tempo $\tau$ in cui ciò avviene sia $\leq \frac{1}{2}$ è
      \begin{equation*}
      P\left(\tau_{1}\leq \frac{1}{2}\right)=\int_{0}^{\frac{1}{2}}1\cdot e^{-1\cdot x} \,dx =1-e^{-\frac{1}{2}}\thicksim 0.393.
@@ -74,38 +78,37 @@ Realizzato in collaborazione con Giulio Nenna (s245717), Andrea Sanna (s222975) 
   \end{enumerate}
 
   \newpage
-\section{}%---------------ESERCIZIO 2-----------------------------------
+\section{}%---------------ESERCIZIO 2 2-----------------------------------
 \begin{alphaparts}
     \questionpart
  Il processo di costruzione e distruzione del castello di sabbia può essere modellato con una catena di Markov a tempo continuo siffatta:                                                                        
-\ctikzfig{Grafo_ES2}
-$S=\{0,1,2\}$ è l'insieme degli stati ai quali sono associati i seguenti transition rates:
-
+ 
+\begin{figure}[htb]\centering
+\includegraphics[scale=0.50]{catenaex2}
+  \end{figure}
+  
+$S=\{0,1,2\}$ è l'insieme degli stati associati ai seguenti rates di permanenza in ognuno di essi:
+  \begin{align*}
+  &\lambda\left(0\right)=2,\\
+  &\lambda\left(1\right)=\left(\frac{1}{1+3}\right)=\frac{1}{4},\\
+  &\lambda\left(2\right)=3.
+  \end{align*}
+ La matrice di transizione della catena a tempo discreto, ovvero la catena ``embedded'', associata a tale processo, è:
+ \begin{equation*}
+  R=\begin{bmatrix}
+        0 & 1 & 0\\
+        1-e^{-3} & 0 & e^{-3} \\
+         1 & 0 & 0
+      \end{bmatrix}.
+\end{equation*}  
+Da essa è possibile ricavare la seguente matrice dei tassi di transizione $q\left(i,j\right)$($=\lambda\left(i\right)r\left(i,j\right),\forall i,j, i\neq j$):
 \begin{equation*}
   Q=\begin{bmatrix}
         -2 & 2 & 0\\
-         3 & -4 & 1 \\
+        \frac{1-e^{-3}}{4} & -\frac{1}{4} &  \frac{1+e^{-3}}{4}\\
          3 & 0 & -3
       \end{bmatrix}.
-\end{equation*} 
-
-Dove \(q(i,j)\) per \(i \neq j\) rappresenta il \textit{rate} dell'esponenziale che partecipa alla gara esponenziale se la catena si trova sullo stato \(i\). Se a vincere è l'esponenziale \(\tau_{ij} \sim \text{exp}(q(i,j))\) allora la catena salta allo stato \(j\). In pratica dallo stato 0 (costruzione del primo piano) si passa necessariamente allo stato 1 dopo un tempo esponenziale (exp(2)). Una volta entrati nello stato 1 (costruzione del secondo piano) parte una gara esponenziale tra l'onda (exp(3)) e la fine della costruzione del secondo piano (exp(2)): se vince la prima si ritorna allo stato 0 mentre se vince la seconda si passa allo stato 2. Infine, arrivati allo stato 2 l'unica possibilità è quella di aspettare un'onda per tornare allo stato 0, che arriverà secondo un tempo esponenziale (exp(3)).
-\\
-
-Da \(Q\) si deducono quindi:
-\begin{align*}
-  \begin{cases}
-    \lambda(0) = 2 \\
-    \lambda(1) = 4 \\
-    \lambda(2) = 3
-  \end{cases} && R =
-  \begin{bmatrix}
-    0 & 1 & 0 \\
-    \frac{3}{4} & 0 & \frac{1}{4} \\
-    0 & 0 & 1 
-  \end{bmatrix}
-\end{align*}
-
+\end{equation*}  
 \questionpart
 La probabilità che, partendo dallo stato $1$, dopo $2$ ore, ci si ritrovi nello stato $0$ è
 \begin{equation*}
@@ -118,7 +121,7 @@ P_{2}=e^{Q_{2}}= \sum_{k=0}^{\infty}2^{k}\frac{Q^{k}}{k!},
 che è una soluzione particolare delle equazioni di Kolmogorov ($P'\left(t\right)=P_{t}Q$ e $P'\left(t\right)=QP_{t}$), nel caso $t=2$.
 
 \questionpart
-La probabilità che i bambini riescano a finire la costruzione del secondo livello, prima che un'onda li costringa a ricominciare ed essendo già alle prese con la costruzione del primo livello, è legata al fatto che la variabile di Poisson relativa al processo di comparsa delle onde arrivi due volte seconda in due gare esponenziali, rispettivamente prima con l'esponenziale di tasso $2$ e, poi, con l'esponenziale di tasso 1 all'ora.\\
+La probabilità che i bambini riescano a finire la costruzione del secondo livello, prima che un' onda li costringa a ricominciare ed essendo già alle prese con la costruzione del primo livello, è legata al fatto che la variabile di Poisson relativa al processo di comparsa delle onde arrivi due volte seconda in due gare esponenziali, rispettivamente prima con l'esponenziale di tasso $2$ e, poi, con l'esponenziale di tasso all'ora.\\
 Allora, si avrà:
 \begin{align*}
 &1^{a} \text{gara}: \,\,\, P\left(\text{exp}\left(2\right) \text{arrivi primo}\right)=\frac{\lambda\left(\text{exp}\left(2\right)\right)}{\sum_{i}\lambda_{i}}=\frac{2}{2+3}=\frac{2}{5};\\
@@ -126,7 +129,7 @@ Allora, si avrà:
 \end{align*}  
 Dunque, la probabilità cercata sarà pari a:
 \begin{equation*}
-\frac{2}{5}\cdot \frac{1}{4}=\frac{1}{10}
+\frac{2}{5}\cdot \frac{1}{4}=\frac{1}{10}= 0.1.
 \end{equation*}
  \end{alphaparts}
     
@@ -136,15 +139,16 @@ Dunque, la probabilità cercata sarà pari a:
 \section{}%---------------ESERCIZIO 3 ------------------------------------------
 Si consideri una CTMC con spazio degli stati $\{0,1,2,...\}$ e rates di transizione (per $i\neq j$)
 \begin{equation*}
-q\left(i,j\right)=\begin{cases}\frac{3+\sin{i}}{1+i^{2}},\,\,\,\text{se}\,\,\,i^{2}<j<2i^{2}+1\\0, \,\,\,\text{altrimenti}\end{cases}.
+q\left(i,j\right)=\begin{cases}\frac{3+\sin{i}}{1+i^{2}},\,\,\,\text{se}\,\,\,i^{2}<j\leq 2i^{2}+1\\0, \,\,\,\text{altrimenti}\end{cases}.
 \end{equation*}
 \begin{alphaparts}
 \questionpart
 Trovare $P\left(X_{1.5}=4 \mid X_{0}=8\right)$ significa calcolare $P_{1.5}\left(8,4\right)$. Tuttavia, $\forall i,j, i\neq j$, dallo stato $i$ si può arrivare allo stato $j$ solamente se 
 \begin{equation*}
-i^2<j<2i^{2}+1
+i<j\leq 2i^{2}+1
 \end{equation*}
-ossia la catena non può fare altro che avanzare nello spazio degli stati Pertanto non è possibile che se \(X_0 = 8\) la catena effettui un passo verso uno stato \(j<8\), in particolare:
+e ciò non è vero per la coppia $\left(8,4\right)$.\\
+Pertanto, si avrà che
 \begin{equation*}
 P_{1.5}\left(8,4\right)=0.
 \end{equation*}
@@ -168,15 +172,16 @@ In conclusione,
 P\left(\tau_{0}<1.5\right)=1-e^{-4.5}\thicksim 0.99.
 \end{equation*}
 \questionpart
-Per capire se la catena è esplosiva, possiamo studiare i rates $\lambda\left(i\right)$ associati ad ogni stato $y_{i}$ della catena ``embedded''. Risulta:
-\begin{gather*}
-\lambda(i) =  \sum \limits_{j=1}^{\infty} q(i,j) =  \sum \limits_{j = i^2 +1}^{2i^2 + 1} \frac{3+\sin(i)}{1+i^2} = \\
-(2i^2 + 1 - i^2 - 1+1) \frac{3+\sin(i)}{1+i^2} = (3+sin(i))\left(\frac{i^2+1}{i^2+1}\right)<4
-\end{gather*}
-Poichè i rate dei tempi di uscita da ciascuno stato sono maggiorati da una costante \(K=4\) allora la catena \textbf{non }è esplosiva.
+Per capire se la catena è esplosiva, possiamo studiare i rates di attesa $\lambda\left(i\right)$, associati ad ogni stato $i$ della catena. Risulta:
+\begin{align*}
+&\lambda\left(0\right)= 3+ \sin{0},\\
+&\lambda\left(1\right)= 3 + \sin{1},\\
+&...\\
+&\lambda\left(i\right)=3+\sin{i}, \,\,\, \forall i.
+\end{align*}
+Poiché, allora, i rates dei tempi di uscita da ciascuno stato sono maggiorati dalla costante $K=4$, la catena non è esplosiva.
+
   \end{alphaparts}
-  
-  
   
   \newpage
   \section{}%---------------ESERCIZIO 4
@@ -187,10 +192,10 @@ Poichè i rate dei tempi di uscita da ciascuno stato sono maggiorati da una cost
   \begin{equation*}
   q\left(i,j\right)=\begin{cases}2^{i} \,\,\,\text{if}\,\,\,j=i+1\\0 \,\,\,\text{if}\,\,\,j\neq i\,\,\,\text{e}\,\,\,j\neq i+1\end{cases},
   \end{equation*}
-  allora la catena ``embedded'' risulta essere una catena di sole ``nascite'', dove $r\left(i,j\right)=1$, $\forall i \neq j$.\\
-  Ne consegue che $\lambda\left(i\right)=2^{i}$, $\forall i$ e, dunque,
+ la catena embedded risulta essere un processo di sole ``nascite'', con $r\left(i,j\right)=1$, $\forall i \neq j$.\\
+  Ne consegue che $\lambda\left(Y_{n}\right)=\lambda\left(n\right)=2^{n}$, $\forall n$ e, dunque,
   \begin{equation*}
-  \sum_{n=0}^{\infty}\frac{1}{\lambda_{y_{n}}}=\sum_{n=0}^{\infty}\frac{1}{2^{n}}=\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}
+  \sum_{n=0}^{\infty}\frac{1}{\lambda\left(Y_{n}\right)}=\sum_{n=0}^{\infty}\frac{1}{2^{n}}=\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}
   \end{equation*}
   è convergente (essendo una serie geometrica di ragione $\frac{1}{2}$).\\
   Pertanto, la catena è esplosiva.
@@ -199,106 +204,112 @@ Poichè i rate dei tempi di uscita da ciascuno stato sono maggiorati da una cost
   \begin{equation*}
   q\left(i,j\right)=\begin{cases}i+1 \,\,\,\text{if}\,\,\,i<j\leq i+5\\0.5 \,\,\,\text{if}\,\,\,j=i-1\,\,\,\text{e}\,\,\,i\geq 1\\0 \,\,\, \text{in tutti gli altri casi}\end{cases},
   \end{equation*}
- allora ad ogni salto catena può effettuare un solo passo indietro oppure un numero di passi in avanti compreso tra 1 e 5. Vale la seguente:
- \begin{gather*}
-   \lambda(0) = 5\\
-   \lambda(i) =  \sum \limits_{j \in S}^{} q(i,j) = 0.5 +  \sum \limits_{i+1}^{i+5}(i+1) = 5i+5.5 \text{ per } i\geq 1
- \end{gather*}
-Ora assumendo che la catena embedded parta da un valore arbitrario \(Y_0=k\) con \(k \in \mathbb{N}\), allora
-\begin{gather*}
-  Y_n \leq k + 5n
-\end{gather*}
-ossia \(Y_n\) non può assumere un valore più grande di \(k+5n\) che si realizzerebbe solamente nel caso in cui la catena compie \(n\) salti di lunghezza \(5\) in avanti.
-\\
-Poiché \(\lambda\) è una funzione monotona vale quindi:
-\begin{gather*}
-  \lambda(Y_n) \leq \lambda(k+5n)
-\end{gather*}
+  risulta che
+  \begin{align*}
+&\lambda\left(0\right)= 5,\\
+&\lambda\left(1\right)= \frac{21}{2},\\
+&\lambda\left(2\right)= \frac{31}{2},\\
+&\lambda\left(3\right)=\frac{41}{2},\\
+&...,\\
+&\lambda\left(i\right)=\frac{10\left(i+1\right)+1}{2},\,\,\, \forall i\geq 1.
+\end{align*}
+Posto $Y_{0}$ lo stato iniziale della catena embedded, risulta che
+\begin{equation*}
+\lambda\left(Y_{n}\right)\leq \lambda\left(Y_{0}+5n\right),\,\,\, \forall n\geq 1,
+\end{equation*} 
 da cui:
-\begin{gather*}
-   \sum \limits_{n=1}^{\infty} \frac{1}{\lambda(Y_n)} \geq  \sum \limits_{n=1}^{\infty} \frac{1}{\lambda(k+5n)}=
-    \sum \limits_{n=1}^{\infty} \frac{1}{5k + 25n + 5.5} = \infty
-\end{gather*}
-pertanto la catena \textbf{non} esplode.
+\begin{equation*}
+\sum_{n=0}^{\infty}\frac{1}{\lambda\left(Y_{n}\right)}\geq \sum_{n=0}^{\infty}\frac{1}{\lambda\left(Y_{0}+5n\right)}=\frac{1}{\lambda\left(Y_{0}\right)}+\sum_{n=1}^{\infty}\frac{2}{10Y_{0}+50n+11}.
+\end{equation*}
+
+Allora, applicando il ``criterio del confronto asintotico'' tra
+\begin{align*}
+\sum_{n=1}^{\infty}\frac{2}{10Y_{0}+50n+11}
+\,\,\, \text{e} \,\,\, \sum_{n=1}^{\infty}\frac{1}{n},
+\end{align*}
+si scopre che
+\begin{equation*}
+\lim\limits_{n\rightarrow \infty}\frac{2n}{10Y_{0}+50n+11}=\frac{1}{25}
+\end{equation*}
+  e, quindi, ne consegue che la serie 
+\begin{equation*}
+ \sum_{n=0}^{\infty}\frac{1}{\lambda\left(Y_{n}\right)}
+\end{equation*}  
+  diverge.\\
+ La catena, pertanto, non risulta essere esplosiva.
+  
   \questionpart
   Se i tassi di transizione sono
   \begin{equation*}
   q\left(i,j\right)=\begin{cases}2^{i} \,\,\,\text{if}\,\,\,j=i+1\\2^{i+1} \,\,\,\text{if}\,\,\,j=i-1\,\,\,\text{e}\,\,\,i\geq 2\\0 \,\,\, \text{in tutti gli altri casi}\end{cases},
   \end{equation*}
-  Allora, per \(i \geq 2\):
-  \begin{gather*}
-    \lambda(i) = 2^{i+1} + 2^i = 3 \cdot 2^i.
-  \end{gather*}
-  In particolare per \(i\geq 2\):
-  \begin{gather*}
-    r(i,i+1) = \frac{q(i, i+1)}{\lambda(i)} = \frac{1}{3}\\
-    r(i,i-1) = \frac{q(i, i-1)}{\lambda(i)} = \frac{2}{3}
-  \end{gather*}
-  La catena embedded è quindi una \textit{birth-death chain} discreta riflessa nello stato 0. Questo tipo di catena discreta ammette una distribuzione stazionaria (e quindi è ricorrente) se e solo se:
-  \begin{gather*}
-    M =  \sum \limits_{x=0}^{\infty} \prod\limits_{i=0}^{x-1} \frac{p_i}{q_{i-1}} < \infty
-  \end{gather*} 
-  dove nel nostro caso:
+  risulta che
   \begin{align*}
-    p_i = \frac{1}{3} && q_i = \frac{2}{3} && \forall i \geq 2 \\
-    p_0 = p_1 = 1 && q_0 = q_1 = 0\\
-  \end{align*}
-  infatti se la catena si trova negli stati 0 o 1 non può fare altro che avanzare di un passo.
-  \\
-  Quindi la quantità M in esame sarà pari a:
-  \begin{gather*}
-    M = 2 +  \sum \limits_{x=3}^{\infty} \left(\frac{1}{2}\right)^x < \infty.
-  \end{gather*}
-  Questo risultato dimostra che la catena embedded \((Y_n)_{n \in \mathbb{N}}\) relativa alla CTMC ammette una distribuzione stazionaria ed è quindi una catena \textbf{ricorrente}. In particolare la CTMC in esame \textbf{non} può essere esplosiva dal momento che se una generica CTMC è esplosiva, allora la sua catena embedded deve necessariamente essere transiente.
-
-
-
-
-
-
-
-
-
+&\lambda\left(0\right)= 1,\\
+&\lambda\left(1\right)= 2,\\
+&\lambda\left(2\right)= 3\cdot 2^{2},\\
+&\lambda\left(3\right)=3\cdot 2^{3},\\
+&\lambda\left(4\right)=3\cdot 2^{4},\\
+&...,\\
+&\lambda\left(i\right)=3\cdot2^{i}, \,\,\, \forall i\geq 2.
+\end{align*}
+In particolare, per $i\geq 2$, si ha:
+\begin{align*}
+&r\left(i,i+1\right)=\frac{q\left(i,i+1\right)}{\lambda\left(i\right)}=\frac{1}{3},\\
+&r\left(i,i-1\right)=\frac{q\left(i,i-1\right)}{\lambda\left(i\right)}=\frac{2}{3}.
+\end{align*}
+La catena embedded, quindi, contiene una \emph{birth and death chain} discreta, riflessa nello stato $2$. Questo tipo di catena ammette una distribuzione stazionaria (e quindi è ricorrente) se e solo se
+\begin{equation*}
+M=\sum_{x=0}^{\infty}\prod_{i=0}^{x-1}\frac{p_{i}}{q_{i-1}}<\infty
+\end{equation*}
+dove, nel nostro caso, lo stato $0$ coincide con lo stato $2$ e
+\begin{align*}
+&p_{i}=\frac{1}{3}&&q_{i}=\frac{2}{3}\\
+&p_{0}=p_{1}=1 && q_{0}=q_{1}=0, \,\,\, \forall i\geq 2.
+\end{align*} 
+Inoltre, se la catena embedded  si trova negli stati $0$ e $1$, non può fare altro che ``entrare'', in un tempo finito, nella catena di nascita e morte appena descritta.\\
+Siccome, allora, per tale catena risulta che
+\begin{equation*}
+M=1+\sum_{k=0}^{\infty}\left(\frac{1}{2}\right)^{k}<\infty,
+\end{equation*} 
+la catena embedded $\left(Y_{n}\right)_{n\in\mathbb{N}}$, relativa alla CTMC in questione, ammette una distribuzione stazionaria ed è, quindi, una catena ricorrente. In particolare, la CTMC non può essere esplosiva, dal momento che, se una generica CTMC è esplosiva, allora la sua catena embedded deve necessariamente essere transiente. 
 
   \end{alphaparts}
   
   
   \newpage
   \section{}%---------------ESERCIZIO 5
-  
   Sia $\Omega=\mathbb{N}\setminus \{0\}$ e $\mathcal{F}=P\left(\Omega\right)$.\\
   Si consideri il seguente processo stocastico:
   \begin{equation*}
   \begin{cases} X_{0}=0\\X_{n}=\begin{cases}-1 \,\,\, \text{se} \,\,\, \omega\leq n\\n \,\,\, \text{se} \,\,\, \omega> n\end{cases} \end{cases}.
   \end{equation*}
-  
+  \begin{figure}[htb]\centering
+\includegraphics[scale=0.50]{martingalaex5.jpg}
+  \end{figure}
+\subsection*{ }
   \begin{enumerate}
   \item[(1)]
-  Osserviamo che:
-  \begin{align*}
-  &X_{0}\left(\omega\right)\in\{0\},\\
-  &X_{1}\left(\omega\right)\in\{-1,1\},\\
-  &X_{2}\left(\omega\right)\in\{-1,2\},\\
-  &...\,\,\,\text{e così via}.
-  \end{align*}
-  Pertanto le controimmagini sono nella forma:
-  \begin{gather*}
-    X_1^{-1}(1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega > 1\}\\
-    X_1^{-1}(-1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega \leq 1\}\\
-    X_2^{-1}(2) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega > 2\}\\
-    X_2^{-1}(-1) = \{ \omega \in \mathbb{N} \backslash \{0\} | \omega \leq 2\}\\
-    \vdots
-  \end{gather*}
-  Le \(\sigma\)-algebre che rendono misurabile il processo allo scorrere di \(t\) sono quindi (si considera \(k \in \mathbb{N}\backslash\{0\}\)):
-  \begin{gather*}
-    \sigma (X_1) = \sigma (\{0, 1\}, \{k > 1\})\\
-    \sigma (X_2) = \sigma (\{0, 1\}, \{k > 1\}, \{0, 1, 2\}, \{k > 2\})\\
-    \vdots
-  \end{gather*}
+Osserviamo che per   n = 1 vale
+  %\begin{align*}
 
-  Se ne deduce, allora, che, per $n\geq 0$,
+  \[X_{1}=\begin{cases}-1 \,\,\, \text{se} \,\,\, \omega=1\\    +1 \,\,\, \text{se} \,\,\, \omega> 1\end{cases}\]
+%  \[A_{-1}= \{\omega \in \Omega : \omega_1 = -1\} = 1;\]
+%  \[A_{+1}= \{\omega \in \Omega : \omega_1 = +1\} = \omega \geq 2;\]
   \begin{equation*}
-  \mathcal{F}_{n}=\sigma\{X_{0},...,X_{n}\}=\sigma(\{0, \dots , i\}, \{k > i\}, i = 1, \dots n)
+  \mathcal{F}_{1}=\sigma\{X_1\}=\sigma\{X_1^{-1}(A_{-1}), X_1^{-1}(A_{+1})\} = \sigma\{\{1\},[2, +\infty)\}.
+  \end{equation*}
+  %\{\{1\},[2, +\infty)\}.
+% X_{1}\left(\omega\right)\in\{-1,1\},\\
+% X_{2}\left(\omega\right)\in\{-1,2\},\\
+%  ...\,\,\,\text{e così via}.
+%  %\end{align*}
+  Se ne deduce, allora, che, per $n > 0$
+  \[X_{n}=\begin{cases}-1 \,\,\, \text{se} \,\,\, \omega\leq n\\    n \,\,\,\,\,\,\, \text{se} \,\,\, \omega> n\end{cases}\]
+  e la filtrazione naturale del processo è: 
+  \begin{equation*}
+  \mathcal{F}_{n}=\sigma\{X_{0},...,X_{n}\}=\sigma\{\{1\},\{2\},...,\{n\}, [n+1
+  , \infty)\}.
   \end{equation*}
   \item[(2)]
   Sia
@@ -367,7 +378,7 @@ X_{n} + \mathbb{E}[X_{n+1} - X_{n}] =X_n+(-1)\cdot \sum_{k=1}^{n+1}\frac{1}{k} -
  \end{align*}
  \end{itemize}
  \item[(3)]
- La martingala $X_{n}$ è limitata in $L^{1}$, perché si ha che
+La martingala $X_{n}$ è limitata in $L^{1}$, perché si ha che
  \begin{equation*}
 \sup_{n} {\mathbb{E}[\lvert X_{n}\left(\omega\right)\lvert]}= \sup_{n} \frac{2n}{n+1} < \infty
  \end{equation*}
@@ -384,7 +395,9 @@ perciò applicando il teorema di convergenza di Doob si ottiene che
   \begin{equation*}
   \begin{cases} M_{n}=\omega \,\,\, \text{se} \,\,\, \omega\leq n\\M_{n}=n+2 \,\,\, \text{se} \,\,\, \omega> n\end{cases}.
   \end{equation*}
-  
+  \begin{figure}[htb]\centering
+\includegraphics[scale=0.60]{martingalaex6.jpg}
+  \end{figure}
   \begin{enumerate}
   \item[(1)]
   Mostriamo che $\mathbb{P}$ è una probabilità su $\left(\Omega,\mathcal{F}\right)$.
@@ -397,8 +410,7 @@ perciò applicando il teorema di convergenza di Doob si ottiene che
   \item[-]
   $\mathbb{P}\left(\cup_{j=1}^{\infty}A_{j}\right)=\sum_{j=1}^{\infty}\mathbb{P}\left(A_{j}\right)$, poiché, in tal caso, è possibile scrivere
   \begin{align*}
-  &\mathbb{P}\left(\cup_{j=1}^{\infty}A_{j}\right)=\sum_{k\in\cup_{j=1}^{\infty}A_{j}}\frac{1}{2^{k}}=\sum_{k\in A_{1}}\frac{1}{2^{k}}+\sum_{k\in A_{2}}\frac{1}{2^{k}}+...=\\
-  &\mathbb{P}\left(A_{1}\right)+\mathbb{P}\left(A_{2}\right)+...=\sum_{j=1}^{\infty}\mathbb{P}\left(A_{j}\right);
+\mathbb{P}\left(\cup_{j=1}^{\infty}A_{j}\right)=\sum_{k\in A_{1}}\frac{1}{2^{k}}+\sum_{k\in A_{2}}\frac{1}{2^{k}}+...=\mathbb{P}\left(A_{1}\right)+\mathbb{P}\left(A_{2}\right)+...=\sum_{j=1}^{\infty}\mathbb{P}\left(A_{j}\right);
 \end{align*}   
 \item[-]
 $\mathbb{P}\left(\Omega\right)=1$ poiché, osservando che
@@ -410,6 +422,8 @@ in cui riconosciamo la serie geometrica di ragione $q= \frac{1}{2}$ e pertanto v
 &\sum_{n=1}^{\infty}2^{-n}=\frac{1}{1-\frac{1}{2}} - 1= 2-1= 1.
 \end{align*}
 \end{itemize}
+
+
 Mostriamo che $\left(M_{n}\right)_{n\geq 0}$ è una martingala rispetto alla filtrazione naturale \\$\mathcal{F}_{n}=\sigma\{M_{0},M_{1},...,M_{n}\}$.
  \begin{itemize}
  \item[-]
@@ -431,9 +445,8 @@ Mostriamo che $\left(M_{n}\right)_{n\geq 0}$ è una martingala rispetto alla fil
 &M_n + \frac{n+1}{2^{n+1}} - \frac{n+2}{2^{n+1}} + \sum_{k=n+2}^\infty \frac{1}{2^k} = \frac{-1}{2^{n+1}}+2 - \frac{2^{n+2}-1}{2^{n+1}}-\frac{1}{2^{n+1}}=\\
 &M_n -\frac{1}{2^{n+1}}+\frac{1}{2^{n+1}}=M_n.
    \end{align*}
-
-
-   \end{itemize}   
+   \end{itemize}  
+   \newpage 
    \item[(2)]
    Per dimostrare che $M_n$ è una martingala ereditaria utilizziamo il teorema di caratterizzazione delle martingale in $L^1$. \\
 Esso ci garantisce che se una martingala $M_n$ è uniformemente integrabile allora questa converge quasi certamente ed in $L^1$, e vale $M_n = \mathbb{E} \left[X \lvert \mathbb{F}_n \right]$ per qualche $X \in L^1$, cioè $M_n$ è una martingala ereditaria. \\Una famiglia di variabili aleatorie $X_i$ in uno spazio di probabilità $\left(\Omega, \mathcal{F}, \mathcal{F}_n, \mathcal{P}\right)$ è uniformemente integrabile se vale il limite 
@@ -447,8 +460,6 @@ Dal teorema sovracitato, ma anche dal teorema di Doob e dal teorema di convergen
    \end{equation*}
 Infine, essendo $M_n$ ereditaria si può ancora affermare che vale \[  \lim_{n\to \infty} M_n = \lim_{n\to \infty} \mathbb{E}[X \lvert \mathcal{F}_n] =  \mathbb{E}[X\lvert\mathcal{F}_\infty]\]
 cioè si può sempre supporla originata dal proprio limite e poiché $X_\tau$ é $\mathcal{F}_\infty$-misurabile allora si conclude che \[ \mathbb{E}[M_\infty\lvert\mathcal{F}_n] =  \mathbb{E}[X\lvert\mathcal{F}_n].\]
-   
-   
    
   \end{enumerate}
   
@@ -480,7 +491,7 @@ cioè si può sempre supporla originata dal proprio limite e poiché $X_\tau$ é
      \mathbb{E}[\mid \sum_{i=1}^{\infty}\mid M_{i}-M_{i-1}\mid \mathbbm{1}_{\{\tau\geq i\}} \mid]<+\infty,
      \end{equation*}
      per poter dire che  $\mid M_{n}^{\tau}\mid\leq Z \in L^{1}$.\\
-     In effetti, ciò è assicurato dal ``teorema di convergenza dominata'' di Beppo Levi'', per il quale risulta che
+     In effetti, ciò è assicurato dal teorema di convergenza dominata di Beppo Levi, per il quale risulta che
      \begin{align*}
       &\mathbb{E}[\mid \sum_{i=1}^{\infty}\mid M_{i}-M_{i-1}\mid \mathbbm{1}_{\{\tau\geq i\}} \mid]\leq  \mathbb{E}[\sum_{i=1}^{\infty}K \mathbbm{1}_{\{\tau\geq i\}} ]=\\
       & \mathbb{E}[\lim\limits_{n\rightarrow \infty}\sum_{i=1}^{n}K\mathbbm{1}_{\{\tau\geq i\}}]=	\lim\limits_{n\rightarrow \infty}\mathbb{E}[\sum_{i=1}^{n}K\mathbbm{1}_{\{\tau\geq i\}}]=\\
@@ -508,7 +519,11 @@ cioè si può sempre supporla originata dal proprio limite e poiché $X_\tau$ é
      \item[ii)]
      $0<a\leq \mid M_{n}-M_{n-1}\mid \leq K <+\infty$.
      \end{itemize}
-     
+     \begin{figure}[htb]\centering
+\includegraphics[scale=0.45]{martingalaex7.jpg}
+  \end{figure}
+  
+  \newpage
   \begin{alphaparts}
   \questionpart
   La martingala in questione non converge q.c. al crescere di $n$. Questo perché essa, per $n\rightarrow \infty$, può espandersi simmetricamente verso valori infinitamente positivi e negativi.\\

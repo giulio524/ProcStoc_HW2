@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.24)  14 FEB 2021 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.24)  17 FEB 2021 17:32
 entering extended mode
 **c:/Users/giuli/Documents/GitHub/ProcStoc_HW2/homework2proc.tex
 (c:/Users/giuli/Documents/GitHub/ProcStoc_HW2/homework2proc.tex
@@ -848,107 +848,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
-[3] [4] [5] [6] [7] [8] [9]
-<martingalaex5.jpg, id=69, 441.44925pt x 458.31226pt>
-File: martingalaex5.jpg Graphic file (type jpg)
-<use martingalaex5.jpg>
-Package pdftex.def Info: martingalaex5.jpg  used on input line 276.
-(pdftex.def)             Requested size: 220.72408pt x 229.15556pt.
- [10 <c:/Users/giuli/Documents/GitHub/ProcStoc_HW2/martingalaex5.jpg>]
-Overfull \hbox (41.42525pt too wide) detected at line 324
+[3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (41.42525pt too wide) detected at line 320
+[]
+ []
+
+
+Overfull \hbox (0.64238pt too wide) detected at line 330
 []
  []
 
 [11]
-Overfull \hbox (0.64238pt too wide) detected at line 334
+Overfull \hbox (5.2448pt too wide) detected at line 353
 []
  []
 
 
-Overfull \hbox (9.44057pt too wide) detected at line 356
+Overfull \hbox (51.20769pt too wide) detected at line 359
 []
  []
 
-[12] [13]
-<martingalaex6.jpg, id=89, 458.46281pt x 405.76593pt>
-File: martingalaex6.jpg Graphic file (type jpg)
-<use martingalaex6.jpg>
-Package pdftex.def Info: martingalaex6.jpg  used on input line 378.
-(pdftex.def)             Requested size: 275.0798pt x 243.46143pt.
- [14 <c:/Users/giuli/Documents/GitHub/ProcStoc_HW2/martingalaex6.jpg>] [15]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 429.
+
+Overfull \hbox (66.16972pt too wide) detected at line 367
+[]
+ []
+
+[12]
+Overfull \hbox (59.12894pt too wide) detected at line 424
+[]
+ []
+
+[13]
+Overfull \hbox (66.4676pt too wide) detected at line 433
+[]
+ []
+
+[14] [15]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 467.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Overfull \hbox (75.85008pt too wide) detected at line 429
-[]
- []
-
-
-Overfull \hbox (5.97047pt too wide) detected at line 437
-[]
- []
-
-
-Overfull \hbox (27.06998pt too wide) detected at line 449
-[]
- []
-
-[16]
-Overfull \hbox (68.15485pt too wide) detected at line 473
-[]
- []
-
-[17]
-Overfull \hbox (21.33261pt too wide) detected at line 504
+Overfull \hbox (21.33261pt too wide) detected at line 477
 \OMS/lmsy/m/n/10.95 j \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95 jj \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95 j \OT1/lmr/m/n/10.95 + [] \OMS/lmsy/m/n/10.95 j \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95 j \U/bbm/m/n/10.95 1[] \OMS/lmsy/m/n/10.95 j \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95 j \OT1/lmr/m/n/10.95 + [] \OMS/lmsy/m/n/10.95 j \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 M[] \OMS/lmsy/m/n/10.95 j \U/bbm/m/n/10.95 1[]\OML/lmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (34.62202pt too wide) detected at line 515
+Overfull \hbox (34.62202pt too wide) detected at line 488
 []
  []
 
-[18]
-<martingalaex7.jpg, id=112, 453.94594pt x 634.62094pt>
-File: martingalaex7.jpg Graphic file (type jpg)
-<use martingalaex7.jpg>
-Package pdftex.def Info: martingalaex7.jpg  used on input line 539.
-(pdftex.def)             Requested size: 204.27377pt x 285.57678pt.
- [19 <c:/Users/giuli/Documents/GitHub/ProcStoc_HW2/martingalaex7.jpg>]
-Overfull \hbox (53.46341pt too wide) detected at line 565
+[16]
+Overfull \hbox (53.46341pt too wide) detected at line 534
 []
  []
 
-[20] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 611.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 611.
+[17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 580.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 580.
  (c:/Users\giuli\Documents\GitHub\ProcStoc_HW2\homework2proc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 611.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 611.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 580.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 580.
 Package rerunfilecheck Info: File `homework2proc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 611.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 580.
  )
-(\end occurred when \ifx on line 484 was incomplete)
-(\end occurred when \ifx on line 371 was incomplete)
+(\end occurred when \ifx on line 457 was incomplete)
+(\end occurred when \ifx on line 381 was incomplete)
 (\end occurred when \ifx on line 267 was incomplete)
 (\end occurred when \ifx on line 182 was incomplete)
 (\end occurred when \ifx on line 136 was incomplete)
 (\end occurred when \ifx on line 77 was incomplete)
 (\end occurred when \ifx on line 35 was incomplete) 
 Here is how much of TeX's memory you used:
- 27863 strings out of 480799
- 519850 string characters out of 2905528
- 941809 words of memory out of 3000000
- 43209 multiletter control sequences out of 15000+200000
+ 27835 strings out of 480799
+ 519360 string characters out of 2905528
+ 942809 words of memory out of 3000000
+ 43191 multiletter control sequences out of 15000+200000
  567712 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,15n,71p,3294b,888s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\giuli\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/stmaryrd/dpi657\stmary10.pk> <C:\Users\giuli\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:/Users\giuli\Documents\GitHub\ProcStoc_HW2\homework2proc.pdf (21 pages, 368987 bytes).
+Output written on c:/Users\giuli\Documents\GitHub\ProcStoc_HW2\homework2proc.pdf (18 pages, 261616 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
